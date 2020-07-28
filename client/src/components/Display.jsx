@@ -14,6 +14,8 @@ const Display =props=>{
                 console.log(res);
                 // setAll(res.data);
                 // setPets(res.data.filter(a => new Date(a.start)))
+                res.data.sort((a, b) => (a.type > b.type ? 1: -1));
+                // list.sort((a, b) => (a.color > b.color ? 1 : -1));
                 setPets(res.data);
             })
             .catch(err => console.log(err));

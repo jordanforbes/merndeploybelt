@@ -9,7 +9,6 @@ const ShowPet =props=>{
   const [skill1, setSkill1] = useState("");
   const [skill2, setSkill2] = useState("");
   const [skill3, setSkill3] = useState("");
-  const [points, setPoints] = useState();
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
@@ -38,19 +37,11 @@ const ShowPet =props=>{
         .catch((err) => console.log(err));
     };
 
-    const like =(points)=>{
-        // setPoints(points++);
-        console.log("pushed")
-    }
 
     return (
       <div className="container">
         <div className="row">
           <h3>Details about {name}</h3>
-          Points: {points}
-        </div>
-        <div className="row">
-            <button onClick={(points)=>like(points)} className="btn btn-success">Like {name}</button>
         </div>
         <div className="row">
           <p>

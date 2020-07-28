@@ -22,7 +22,7 @@ const EditPet = (props) => {
             setSkill1(res.data.skill1);
             setSkill2(res.data.skill2);
             setSkill3(res.data.skill3);
-            
+
         }).catch(errors => console.log(errors));
   }, [props._id])
 
@@ -65,7 +65,7 @@ const EditPet = (props) => {
               onChange={(e) => setType(e.target.value)}
               value={type}
             />
-            {errors.name ? (
+            {errors.type ? (
               <p className="text-danger">{errors.type.properties.message}</p>
             ) : (
               ""
@@ -79,7 +79,7 @@ const EditPet = (props) => {
               onChange={(e) => setDescription(e.target.value)}
               value={description}
             />
-            {errors.name ? (
+            {errors.description ? (
               <p className="text-danger">
                 {errors.description.properties.message}
               </p>
@@ -99,7 +99,7 @@ const EditPet = (props) => {
               onChange={(e) => setSkill1(e.target.value)}
               value={skill1}
             />
-            {errors.name ? (
+            {errors.skill1 ? (
               <p className="text-danger">{errors.skill1.properties.message}</p>
             ) : (
               ""
@@ -113,7 +113,7 @@ const EditPet = (props) => {
               onChange={(e) => setSkill2(e.target.value)}
               value={skill2}
             />
-            {errors.name ? (
+            {errors.skill2 ? (
               <p className="text-danger">{errors.skill2.properties.message}</p>
             ) : (
               ""
@@ -127,7 +127,7 @@ const EditPet = (props) => {
               onChange={(e) => setSkill3(e.target.value)}
               value={skill3}
             />
-            {errors.name ? (
+            {errors.skill3 ? (
               <p className="text-danger">{errors.skill3.properties.message}</p>
             ) : (
               ""

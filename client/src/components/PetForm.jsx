@@ -6,11 +6,13 @@ const PetForm = props => {
     const [name, setName] = useState("");
     const [type, setType] = useState("");
     const [description, setDescription] = useState("");
-    const [skill1, setSkill1] = useState("");
+    const [skill1, setSkill1] = useState("none");
     const [skill2, setSkill2] = useState("");
     const [skill3, setSkill3] = useState("");
     const [errors, setErrors] = useState({});
     const [points, setPoints] = useState(0);
+
+    
 
     const CreatePet =e=> {
         e.preventDefault();
@@ -46,7 +48,7 @@ const PetForm = props => {
                 className="form-control"
                 onChange={(e) => setType(e.target.value)}
               />
-              {errors.name ? (
+              {errors.type ? (
                 <p className="text-danger">{errors.type.properties.message}</p>
               ) : (
                 ""
@@ -59,7 +61,7 @@ const PetForm = props => {
                 className="form-control"
                 onChange={(e) => setDescription(e.target.value)}
               />
-              {errors.name ? (
+              {errors.description ? (
                 <p className="text-danger">
                   {errors.description.properties.message}
                 </p>
@@ -78,7 +80,7 @@ const PetForm = props => {
                 className="form-control"
                 onChange={(e) => setSkill1(e.target.value)}
               />
-              {errors.name ? (
+              {errors.skill1 ? (
                 <p className="text-danger">
                   {errors.skill1.properties.message}
                 </p>
@@ -93,7 +95,7 @@ const PetForm = props => {
                 className="form-control"
                 onChange={(e) => setSkill2(e.target.value)}
               />
-              {errors.name ? (
+              {errors.skill2 ? (
                 <p className="text-danger">
                   {errors.skill2.properties.message}
                 </p>
@@ -108,7 +110,7 @@ const PetForm = props => {
                 className="form-control"
                 onChange={(e) => setSkill3(e.target.value)}
               />
-              {errors.name ? (
+              {errors.skill3 ? (
                 <p className="text-danger">
                   {errors.skill3.properties.message}
                 </p>
